@@ -1,18 +1,21 @@
 import React, { Component } from "react";
 
 class ProductDetails extends Component {
-  handleSave = () => {
-    // Navigate to /products
-  };
+	handleSave = () => {
+		// Navigate to /products
+	};
 
-  render() {
-    return (
-      <div>
-        <h1>Product Details - </h1>
-        <button onClick={this.handleSave}>Save</button>
-      </div>
-    );
-  }
+	render() {
+		// the new way to do it :(
+		// let { id } = useParams();
+		const { id } = this.props.match.params;
+		return (
+			<div>
+				<h1>Product Details - {id}</h1>
+				<button onClick={this.handleSave}>Save</button>
+			</div>
+		);
+	}
 }
 
 export default ProductDetails;
