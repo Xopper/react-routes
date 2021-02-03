@@ -3,6 +3,10 @@ import React, { Component } from "react";
 class ProductDetails extends Component {
 	handleSave = () => {
 		// Navigate to /products
+		// push save previous page
+		// this.props.history.push("/products");
+		// replace unset from history usefull in cases like login
+		this.props.history.replace("/products");
 	};
 
 	render() {
