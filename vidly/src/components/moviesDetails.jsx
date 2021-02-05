@@ -2,8 +2,8 @@ import React, { Component, Fragment } from "react";
 
 class MoviesDetails extends Component {
 	handleSave = () => {
-		console.log(this.props);
-		// this.props.history.replace("/movies");
+		// console.log(this.props);
+		// this.props.history.push("/movies");
 		this.props.history.goBack();
 	};
 
